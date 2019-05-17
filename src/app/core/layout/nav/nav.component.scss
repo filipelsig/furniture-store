@@ -1,13 +1,18 @@
+// Variables
+$nav-bar-height: 56px;
+$nav-bar-bg: #555555;
+$nav-bar-hover: #444444;
+
 // Nav bar styling
 :host {
-    background-color: #555555;
+    background-color: $nav-bar-bg;
     color: white;
-    height: 64px;
+    height: $nav-bar-height;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px 1rem;
-    box-shadow: 2px 2px 8px #444444;
+    box-shadow: 2px 2px 8px $nav-bar-bg;
 }
 
 .logo, nav {
@@ -18,7 +23,7 @@
 nav > div {
   cursor: pointer;
   text-align: center;
-  height: 64px;
+  height: $nav-bar-height;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -26,5 +31,5 @@ nav > div {
 }
 
 nav > div:hover {
-  background-color: #444444;
+  background-color: $nav-bar-hover;
 }

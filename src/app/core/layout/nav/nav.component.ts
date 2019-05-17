@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 interface MenuOption {
   name: string;
   url: string;
