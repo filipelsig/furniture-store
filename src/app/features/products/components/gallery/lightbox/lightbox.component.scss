@@ -1,0 +1,19 @@
+:host {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 100%;
+}
+
+img {
+  max-width: 95vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+button {
+  color: white;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

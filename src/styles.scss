@@ -3,3 +3,17 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 p, h1 {margin: 0px;}
+
+.lightbox > .mat-dialog-container {
+  padding: 0px !important;
+}
+
+.lightbox {
+  max-width: 95vw !important;
+  max-height: 90vh !important;
+
+}
+
+.lightbox-bg {
+  background-color: rgba(0,0,0,0.87);
+}

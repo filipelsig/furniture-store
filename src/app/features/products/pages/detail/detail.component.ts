@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material';
+import {LightboxComponent} from '../../components/gallery/lightbox/lightbox.component';
 
 @Component({
   selector: 'app-detail',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
+  constructor(public dialog: MatDialog) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onHeroClick(url: string) {
+    const ref = this.dialog.open(LightboxComponent, {
+      backdropClass: 'lightbox-bg',
+      panelClass: 'lightbox',
+      data: {url}
+    });
   }
-
 }
