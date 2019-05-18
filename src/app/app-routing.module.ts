@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'home', loadChildren: './features/landing/landing.module#LandingModule' },
+  { path: 'about', loadChildren: './features/about-us/about-us.module#AboutUsModule' },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 

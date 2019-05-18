@@ -5,7 +5,7 @@
   <!-- Navigation -->
   <ng-container *ngIf="!(mobileLayout | async); else mobile">
     <nav fxLayout="row" fxLayoutAlign="flex-end center">
-      <div *ngFor="let option of menuOptions" matRipple matRippleColor="black" class="mat-button">{{option.name}}</div>
+      <div *ngFor="let option of menuOptions" matRipple matRippleColor="black"  (click)="navigate(option.url)" class="mat-button">{{option.name}}</div>
     </nav>
   </ng-container>
 </header>
@@ -13,7 +13,7 @@
 <ng-template #mobile>
   <button mat-icon-button class="menu-btn" (click)="showMenu = !showMenu"><mat-icon>menu</mat-icon></button>
   <div @menuList *ngIf="showMenu" class="mobile-nav" fxLayout="column" fxLayoutAlign="flex-end center">
-    <div (click)="showMenu = !showMenu" *ngFor="let option of menuOptions" matRipple matRippleColor="black" class="mat-button">{{option.name}}</div>
+    <div *ngFor="let option of menuOptions" matRipple matRippleColor="black" (click)="navigate(option.url)"  class="mat-button">{{option.name}}</div>
   </div>
 </ng-template>
 

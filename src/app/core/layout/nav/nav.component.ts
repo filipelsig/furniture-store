@@ -3,6 +3,7 @@ import { menuList } from './nav.animations';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 interface MenuOption {
   name: string;
   url: string;
@@ -20,18 +21,23 @@ export class NavComponent implements OnInit {
 
   menuOptions: MenuOption[] = [
     {name: 'Møbler', url: ''},
-    {name: 'Om os', url: ''},
+    {name: 'Om os', url: '/about'},
     {name: 'Lædertyper & Stof', url: ''},
     {name: 'Kontakt', url: ''},
     {name: 'Åbningstider', url: ''}
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
 
   ngOnInit() {
     this.mobileLayout = this.breakpointObserver.observe([
       Breakpoints.Handset
     ]).pipe(map(result => result.matches));
+  }
+
+  navigate(url:string) {
+    this.router.navigateByUrl(url);
+    this.showMenu = false;
   }
 
 }

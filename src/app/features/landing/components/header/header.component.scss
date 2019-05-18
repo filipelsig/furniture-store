@@ -8,3 +8,45 @@
   place-items: center;
   width: 100%;
 }
+
+section {
+  max-width: 760px;
+  display: grid;
+  grid-gap: 2rem;
+  padding: 1rem;
+}
+
+h1, h4 {
+  margin: 0px;
+  text-align: center;
+}
+
+button {
+  max-width: 256px;
+  width: 100%;
+  height: 48px;
+  justify-self: center;
+
+  mat-icon {
+    margin-left: 1rem;
+    margin-bottom: 1px;
+    transition: margin-left 250ms ease-in-out;
+  }
+
+  &:hover {
+
+    mat-icon {
+      margin-left: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mat-display-3 {
+    font-size: 2.5rem;
+  }
+
+  .mat-display-1 {
+    font-size: 1.5rem;
+  }
+}
