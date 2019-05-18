@@ -1,0 +1,81 @@
+section {
+  padding: 1rem;
+  height: calc(100% - 2rem);
+  min-height: 320px;
+  max-width: 1024px;
+  text-align: right;
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  grid-template:
+    " header        image " 1fr
+    " description   image " auto
+    " action        image " 1fr //minmax(56px, auto)
+    / 1fr           1fr;
+}
+
+section.reverse {
+  text-align: left;
+  grid-template:
+  " image header       " 1fr
+  " image description  " auto
+  " image action       " 1fr //
+  / 1fr   1fr;
+
+  ::ng-deep button {
+    justify-self: flex-start;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section, section.reverse {
+    border-bottom: 1px solid #F1F1F1;
+    text-align: center;
+    grid-column-gap: 0rem;
+    grid-row-gap: 1rem;
+    grid-template:
+    " header       " minmax(56px, auto)
+    " description  " auto
+    " image        " 192px
+    " action       " minmax(56px, auto)
+    / 1fr;
+  }
+
+  section ::ng-deep button, section.reverse ::ng-deep button {
+    justify-self: center;
+  }
+}
+
+:host ::ng-deep h1 {
+  grid-area: header;
+  margin-top: 1rem;
+  margin-bottom: 0px;
+  align-self: flex-end;
+}
+
+:host ::ng-deep p {
+  grid-area: description;
+  line-height: 1.5rem;
+  margin-bottom: 0px;
+}
+
+:host ::ng-deep button {
+  grid-area: action;
+  margin-bottom: 1rem;
+  width: 50%;
+  justify-self: flex-end;
+  height: 36px;
+
+  mat-icon {
+    margin-left: 1rem;
+    color: rgba(0,0,0,0.87);
+  }
+}
+
+:host ::ng-deep img {
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.32);
+}
