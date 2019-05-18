@@ -1,3 +1,3 @@
 <section class="gallery" @reveal>
-  <img *ngFor="let image of images; let i = index" (click)="imgClick(i)" [src]="image" />
+  <img *ngFor="let image of images; let i = index" (click)="imgClick(i)" [lazySrc]="image" />
 </section>
