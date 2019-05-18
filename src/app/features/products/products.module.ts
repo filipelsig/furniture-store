@@ -8,6 +8,8 @@ import {MaterialPickerComponent} from './components/material-picker/material-pic
 import {PurchaseComponent} from './components/purchase/purchase.component';
 import {GalleryComponent} from './components/gallery/gallery.component';
 import {LightboxComponent} from './components/gallery/lightbox/lightbox.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {LightboxComponent} from './components/gallery/lightbox/lightbox.componen
     MaterialPickerComponent,
     PurchaseComponent,
     GalleryComponent,
-    LightboxComponent
+    LightboxComponent,
+    ProductListComponent,
+    ProductCardComponent
   ],
   entryComponents: [LightboxComponent],
   imports: [SharedModule, ProductsRoutingModule]

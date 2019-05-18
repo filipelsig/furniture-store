@@ -1,0 +1,62 @@
+:host {
+  background-color: white;
+  display: grid;
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.36);
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  justify-items: center;
+  grid-template:
+    " title  title   " 48px
+    " img    img     " auto
+    " desc   desc    " auto
+    " price  action  " auto
+    / 1fr    1fr;
+}
+
+:host ::ng-deep p, h3 {
+  margin: 0px;
+}
+
+:host ::ng-deep h3 {
+  margin: 0px;
+  grid-area: title;
+  align-self: flex-end;
+}
+
+:host ::ng-deep .mat-body {
+  grid-area: desc;
+  margin: 0rem 1rem;
+  text-align: center;
+}
+
+button {
+  grid-area: action;
+  margin-right: 1rem;
+  width: 100%;
+  height: 36px;
+  align-self: center;
+  justify-self: flex-end;
+  margin-bottom: 1rem;
+
+  mat-icon {
+    margin-left: 0.5rem;
+    color: rgba(0,0,0,0.87);
+    margin-bottom: 2px;
+  }
+}
+
+:host ::ng-deep .price {
+  grid-area: price;
+  align-self: center;
+  justify-self: center;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+:host ::ng-deep img {
+  grid-area: img;
+  width: 100%;
+  object-fit: contain;
+}

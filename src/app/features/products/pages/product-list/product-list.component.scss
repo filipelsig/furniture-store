@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  justify-items: center;
+  width: calc(100% - 2rem);
+  grid-gap: 1rem;
+  grid-template: "header header header " auto ". content   ." auto / 1fr minmax(auto, 1024px) 1fr;
+  padding: 1rem;
+}
+
+section {
+  grid-area: content;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+  grid-gap: 1rem;
+}
+
+
+h2 {
+  max-width: 1024px;
+  grid-area: header;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  margin: 0px;
+}
