@@ -16,7 +16,10 @@ export class DetailComponent implements OnInit {
     const ref = this.dialog.open(LightboxComponent, {
       backdropClass: 'lightbox-bg',
       panelClass: 'lightbox',
-      data: {url}
+      data: {
+        images: [url],
+        startIndex: 0
+      }
     });
   }
 }

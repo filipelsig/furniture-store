@@ -11,9 +11,24 @@ img {
   object-fit: contain;
 }
 
-button {
+.close {
   color: white;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+}
+
+.toggle {
+  color: white;
+  position: absolute;
+}
+
+.next {
+  top: 50%;
+  right: 0.5rem;
+}
+
+.previous {
+  top: 50%;
+  left: 0.5rem;
 }
