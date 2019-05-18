@@ -1,30 +1,17 @@
-<section>
-  <h1 class="mat-headline">Arne Jacobsens Ægget</h1>
+<section *ngIf="product$ | async as product">
+  <h1 class="mat-headline">{{ product.name }}</h1>
 
-  <img
-    class="heroImg"
-    (click)="
-      onHeroClick(
-        'https://www.mobelpolstren.dk/wp-content/uploads/%C3%A6gget-sort-classic-front-1-of-1.jpg'
-      )
-    "
-    src="https://www.mobelpolstren.dk/wp-content/uploads/%C3%A6gget-sort-classic-front-1-of-1.jpg"
-  />
+  <img class="heroImg" (click)="onHeroClick(product.hero_img_url)" [src]="product.hero_img_url" />
 
   <main class="mat-body-1">
     <p>
-      Designet af Arne Jacobsen i 1957, til SAS Royal hotellet i København er stadig en af de mest
-      populære stole/kunstværker grundet det tidsløse udtryk samt evnen til at udfylde store og
-      mindre rum.
-    </p>
-    <p class="mat-body-1">
-      Både nye og brugte stole er nybetrukket af os i Classic læder i valgfri farve
+      {{ product.description }}
     </p>
   </main>
 
   <app-purchase class="purchase"></app-purchase>
 
-  <app-gallery class="gallery"> </app-gallery>
+  <app-gallery class="gallery" [images]="product.images"> </app-gallery>
 
   <!--
   <app-product-option class="opt1">

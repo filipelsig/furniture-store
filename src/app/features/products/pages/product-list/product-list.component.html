@@ -1,6 +1,14 @@
 <h2 class="mat-headline">Vores Møbler</h2>
 
 <section>
+  <app-product-card *ngFor="let product of products | async" [id]="product.id">
+    <h3 class="mat-title">{{ product.name }}</h3>
+    <p class="mat-body">{{ product.description }}</p>
+    <p class="price mat-subheading">fra {{ product.base_price | currency: 'DKK':'':'4.0' }},-</p>
+    <img [src]="product.hero_img_url" />
+  </app-product-card>
+
+  <!--
   <app-product-card>
       <h3 class="mat-title">Arne Jacobsens Ægget</h3>
       <p class="mat-body">Designet af Arne Jacobsen i 1957, til SAS Royal hotellet i København er stadig en af
@@ -44,5 +52,5 @@
       </p>
       <p class="price mat-subheading">fra 16.000,-</p>
       <img src="https://www.mobelpolstren.dk/wp-content/uploads/PK9-walnut-front-1-of-1.jpg" />
-  </app-product-card>
+  </app-product-card>-->
 </section>

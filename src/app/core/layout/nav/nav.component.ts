@@ -21,7 +21,7 @@ export class NavComponent implements OnInit {
 
   menuOptions: MenuOption[] = [
     {name: 'Møbler', url: '/products'},
-    {name: 'Om os', url: '/about'},
+    {name: 'Om os', url: ''},
     {name: 'Lædertyper & Stof', url: ''},
     {name: 'Kontakt', url: ''},
     {name: 'Åbningstider', url: ''}
