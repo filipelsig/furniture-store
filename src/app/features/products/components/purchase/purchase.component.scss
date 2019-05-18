@@ -1,0 +1,102 @@
+section {
+  display: grid;
+  grid-row-gap: 1rem;
+  align-items: center;
+  margin-right: 1rem;
+  grid-template:
+    " option    option  " auto
+    " leather   leather " auto
+    " extras    extras  " auto
+    " buy     buy     " auto
+    / 1fr       2fr;
+}
+
+@media only screen and (max-width: 767px) {
+
+  section {
+    justify-items: center;
+  }
+
+}
+
+.extras {
+  grid-area: extras;
+}
+
+.mat-button-toggle {
+  flex: 1 1 auto;
+}
+
+.mat-button-toggle-group {
+  width: 100%;
+  max-width: 312px;
+  grid-area: option;
+}
+
+.price {
+  grid-area: price;
+  align-self: center;
+  margin: 0px;
+  // margin-left: 1rem;
+}
+
+.buy {
+  border-top: 1px solid rgba(0,0,0,0.12);
+  grid-area: buy;
+  display: grid;
+  grid-template:
+    "price  times amount  buy   ." auto
+    /auto   auto  auto    auto  1fr;
+  align-items: center;
+  grid-column-gap: 1rem;
+
+  button {
+    grid-area: buy;
+    padding: 0rem 2rem;
+    height: 48px;
+
+    mat-icon {
+      margin-left: 1rem;
+      margin-bottom: -1px;
+    }
+  }
+
+  .price {
+    grid-area: price;
+  }
+
+  .mat-body-2 {
+    grid-area: times;
+  }
+
+  mat-form-field {
+    grid-area: amount;
+    width: 48px;
+    font-size: 1.125rem;
+    margin-bottom: -4px;
+    // margin-bottom: -21.5px;
+    //height: 32px;
+  }
+}
+
+.picker {
+  grid-area: leather;
+}
+
+@media only screen and (max-width: 450px) {
+
+  .buy {
+    justify-self: center;
+    width: 100%;
+    grid-template:
+    " .   price  times amount   . " auto
+    " .   buy    buy   buy      . " auto
+    / 1fr auto   auto  auto     1fr;
+
+  }
+
+}
+
+.mat-checkbox {
+  font-size: 1rem;
+}

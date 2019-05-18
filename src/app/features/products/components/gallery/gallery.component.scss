@@ -1,0 +1,14 @@
+.gallery {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+}
+
+:host ::ng-deep img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.56);
+  border-radius: 4px;
+}

@@ -1,0 +1,32 @@
+<section>
+  <mat-button-toggle-group name="product-type">
+    <mat-button-toggle value="new" checked>Ny</mat-button-toggle>
+    <mat-button-toggle value="used">Brugt</mat-button-toggle>
+    <mat-button-toggle value="upol">Ombetrækning</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <app-material-picker class="picker"></app-material-picker>
+
+  <div class="extras mat-body">
+    <mat-checkbox color="primary">Returdrejfunktion ( +1.500,- )</mat-checkbox>
+  </div>
+
+  <div class="buy">
+    <p class="price mat-title">35.000 kr.</p>
+    <p class="mat-body-2">X</p>
+    <mat-form-field>
+      <mat-select value="1">
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+        <mat-option value="6">6</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button color="primary" mat-raised-button>
+      <span>BESTIL</span>
+      <mat-icon>forward</mat-icon>
+    </button>
+  </div>
+</section>
