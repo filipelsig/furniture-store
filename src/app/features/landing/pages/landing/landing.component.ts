@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-landing',
@@ -6,7 +7,9 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  constructor() {}
+  constructor(private title: Title) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.title.setTitle('Welcome');
+  }
 }

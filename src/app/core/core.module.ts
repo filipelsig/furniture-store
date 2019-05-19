@@ -8,6 +8,7 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../../environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { ProductService } from './services/product/product.service';
 
 @NgModule({
   declarations: [NavComponent],
@@ -21,6 +22,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  exports: [NavComponent]
+  exports: [NavComponent],
+  providers: [ProductService]
 })
 export class CoreModule {}
