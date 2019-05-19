@@ -1,13 +1,45 @@
 :host {
-  background-image:
-  linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.36)),
-    urL('https://www.mobelpolstren.dk/wp-content/uploads/Ej-315-s%C3%A6t-sort-classic-1-of-1.jpg');
   background-size: cover;
+  background-position: 50% 50%;
   color: white;
   display: grid;
   place-items: center;
   width: 100%;
+
 }
+
+@media only screen and (max-width: 499px)  {
+  :host {
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.36)),
+      urL('https://firebasestorage.googleapis.com/v0/b/mobelpolstren.appspot.com/o/_sys%2Flanding%2Flanding_small.jpg?alt=media&token=013e92df-876b-4f36-bf44-06fd9180fb05');
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 799px)  {
+  :host {
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.36)),
+      urL('https://firebasestorage.googleapis.com/v0/b/mobelpolstren.appspot.com/o/_sys%2Flanding%2Flanding_medium.jpg?alt=media&token=4f1e40bc-d00e-498e-9c05-6149f37b3bb0');
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px)  {
+  :host {
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.36)),
+      urL('https://firebasestorage.googleapis.com/v0/b/mobelpolstren.appspot.com/o/_sys%2Flanding%2Flanding_large.jpg?alt=media&token=3c9d6263-a863-485e-b1c7-5e83b02dd7d7');
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  :host {
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.36)),
+      urL('https://firebasestorage.googleapis.com/v0/b/mobelpolstren.appspot.com/o/_sys%2Flanding%2Flanding_xlarge.jpg?alt=media&token=b9c40c3d-57f6-40db-8fdd-c46944578018');
+  }
+}
+
 
 section {
   max-width: 760px;
