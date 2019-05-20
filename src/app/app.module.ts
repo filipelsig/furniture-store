@@ -10,8 +10,8 @@ import {PrebootModule} from 'preboot';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    PrebootModule.withConfig({appRoot: 'app-root', disableOverlay: false}),
     BrowserModule.withServerTransition({appId: 'serverApp'}),
+    PrebootModule.withConfig({appRoot: 'app-root'}),
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule
