@@ -34,6 +34,7 @@
     "@ngx-gallery/core": "^4.0.2-beta.0",
     "@ngx-gallery/gallerize": "^4.0.2-beta.0",
     "@ngx-gallery/lightbox": "^4.0.2-beta.0",
+    "compression": "^1.7.4",
     "core-js": "^2.5.4",
     "express": "^4.15.2",
     "firebase": "^5.9.0",
